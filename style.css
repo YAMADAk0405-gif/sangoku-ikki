@@ -11,7 +11,7 @@ body{
 #app{
     width:95%;
     max-width:500px;
-    margin:20px auto;
+    margin:5px auto;
 }
 
 section{
@@ -129,8 +129,8 @@ button:hover{
 @media (max-width:600px){
 
     #app{
-        width:98%;
-        margin:10px auto;
+    width:98%;
+    margin:5px auto;
     }
 
     section{
@@ -154,5 +154,13 @@ button:hover{
         min-height:140px;
         max-height:140px;
     }
+
+}
+
+/* 戦闘画面調整 */
+
+#battleScreen{
+
+    padding:10px;
 
 }
