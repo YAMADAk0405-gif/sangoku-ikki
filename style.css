@@ -1,207 +1,158 @@
-body {
-
-    margin: 0;
-    padding: 0;
-    background-color: #222;
-    color: white;
-    font-family: sans-serif;
-    text-align: center;
-
-    overflow-y: auto;
-
+body{
+    margin:0;
+    padding:0;
+    background:#222;
+    color:white;
+    font-family:sans-serif;
+    text-align:center;
+    overflow-y:auto;
 }
 
-
-
-#app {
-
-    width: 90%;
-
-    max-width: 500px;
-
-    margin: 40px auto;
-
+#app{
+    width:95%;
+    max-width:500px;
+    margin:20px auto;
 }
 
-
-
-section {
-
-    background-color: #333;
-
-    padding: 30px;
-
-    border-radius: 15px;
-
+section{
+    background:#333;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
 }
 
-
-
-h1 {
-
-    font-size: 40px;
-
-    margin-bottom: 40px;
-
+h1{
+    font-size:36px;
+    margin-bottom:30px;
 }
 
-
-
-h2 {
-
-    margin-bottom: 25px;
-
+h2{
+    margin-bottom:20px;
 }
 
-
-
-button {
-
-    font-size: 18px;
-
-    padding: 12px 30px;
-
-    margin: 8px;
-
-    border-radius: 10px;
-
-    border: none;
-
-    cursor: pointer;
-
+button{
+    width:100%;
+    max-width:320px;
+    font-size:18px;
+    padding:14px;
+    margin:8px auto;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    display:block;
 }
 
-
-
-button:hover {
-
-    opacity: 0.8;
-
+button:hover{
+    opacity:0.9;
 }
-
-
 
 /* 勢力ボタン */
 
-.factionButton {
-
-    width: 120px;
-
+.factionButton{
+    width:120px;
+    display:inline-block;
+    margin:8px;
 }
-
-
 
 /* 武将一覧 */
 
-#warriorList {
-
-    text-align: left;
-
-    margin: 20px auto;
-
-    width: 80%;
-
+#warriorList{
+    width:100%;
+    max-width:350px;
+    margin:20px auto;
+    text-align:left;
 }
 
-
-
-#warriorList div {
-
-    margin: 10px;
-
-    font-size: 18px;
-
+#warriorList div{
+    margin:10px 0;
+    font-size:18px;
 }
-
-
 
 /* 部隊表示 */
 
-#teamList {
-
-    font-size: 20px;
-
-    line-height: 2;
-
+#teamList{
+    font-size:20px;
+    line-height:2;
 }
-
-
 
 /* 戦闘画面 */
 
-#battleStatus {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-
+#battleStatus{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
-
-
 
 #playerInfo,
-#enemyInfo {
-
-    font-size: 20px;
-
+#enemyInfo{
+    font-size:20px;
 }
 
+/* 戦闘ログ */
 
-
-#battleLog {
-
-    background-color: #111;
-
-    height: 220px;
-
-    padding: 15px;
-
-    text-align: left;
-
-    border-radius: 10px;
-
-    line-height: 1.8;
-
-    overflow-y: auto;
-
+#battleLog{
+    background:#111;
+    min-height:140px;
+    max-height:180px;
+    padding:15px;
+    text-align:left;
+    border-radius:10px;
+    line-height:1.8;
+    overflow-y:auto;
+    margin-bottom:15px;
 }
 
+/* HPバー */
 
-
-/* HP表示 */
-
-.hp {
-
-    width: 80%;
-
-    height: 20px;
-
-    background-color: #555;
-
-    margin: 10px auto;
-
-    border-radius: 10px;
-
+.hp{
+    width:90%;
+    height:20px;
+    margin:10px auto;
+    background:#555;
+    border-radius:10px;
 }
 
-
-
-.hpValue {
-
-    height: 100%;
-
-    background-color: #4caf50;
-
-    border-radius: 10px;
-
+.hpValue{
+    height:100%;
+    background:#4caf50;
+    border-radius:10px;
 }
 
+/* 非表示 */
 
+.hidden{
+    display:none;
+}
 
-.hidden {
+/* スマホ用 */
 
-    display: none;
+@media (max-width:600px){
+
+    #app{
+        width:98%;
+        margin:10px auto;
+    }
+
+    section{
+        padding:15px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    button{
+        font-size:17px;
+        padding:12px;
+    }
+
+    #battleLog{
+        min-height:140px;
+        max-height:140px;
+    }
 
 }
