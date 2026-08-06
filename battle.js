@@ -682,9 +682,13 @@ function addLog(text){
     battleLog.appendChild(line);
 
 
+    // ログが増えたら下へスクロール
+    if(battleLog.children.length > 5){
+
     battleLog.scrollTop =
     battleLog.scrollHeight;
 
+    }
 }
 
 
