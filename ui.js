@@ -261,9 +261,11 @@ battleButton.addEventListener("click", function(){
 
     battleScreen.style.display = "block";
 
+    window.scrollTo(0,0);
 
     startBattle();
 
+    battleLog.scrollTop = 0;
 
 });
 
