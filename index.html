@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>三国一騎</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- タイトル -->
+    <section id="titleScreen">
+
+        <h1>三国一騎</h1>
+
+        <button id="startButton">
+            出陣する
+        </button>
+
+    </section>
+
+
+
+    <!-- 勢力選択 -->
+    <section id="factionScreen" style="display:none;">
+
+        <h2>勢力を選択してください</h2>
+
+        <button class="factionButton" data-faction="魏">魏</button>
+        <button class="factionButton" data-faction="蜀">蜀</button>
+        <button class="factionButton" data-faction="呉">呉</button>
+
+    </section>
+
+
+
+    <!-- 武将選択 -->
+    <section id="selectScreen" style="display:none;">
+
+        <h2>代表武将を選んでください</h2>
+
+        <div id="warriorList"></div>
+
+        <br>
+
+        <button id="confirmButton">
+            決定
+        </button>
+
+        <br>
+
+        <button id="backFactionButton">
+        ← 勢力選択へ戻る
+        
+</button>
+
+    </section>
+
+
+
+    <!-- 部隊確認 -->
+    <section id="teamScreen" style="display:none;">
+
+        <h2>あなたの部隊</h2>
+
+        <div id="teamList"></div>
+
+        <br>
+
+        <button id="battleButton">
+            一騎打ち開始
+        </button>
+
+    </section>
+
+
+
+    <!-- 戦闘画面 -->
+    <section id="battleScreen" style="display:none;">
+
+        <h2>⚔ 一騎打ち ⚔</h2>
+
+        <div id="battleStatus">
+
+            <div>
+
+                <h3>あなた</h3>
+
+                <div id="playerInfo"></div>
+
+            </div>
+
+            <hr>
+
+            <div>
+
+                <h3>敵</h3>
+
+                <div id="enemyInfo"></div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <h3>戦闘ログ</h3>
+
+        <div id="battleLog"></div>
+
+        <br>
+
+        <button id="nextTurnButton">
+            次へ
+        </button>
+
+        <br>
+
+        <button id="restartBattleButton">
+        再戦する
+        </button>
+
+        <br>
+
+        <button id="backTitleButton">
+            トップへ戻る
+        </button>
+
+    </section>
+
+</div>
+
+<script src="warriors.js"></script>
+<script src="team.js"></script>
+<script src="battle.js"></script>
+<script src="ui.js"></script>
+
+</body>
+
+</html>
