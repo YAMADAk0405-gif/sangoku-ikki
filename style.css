@@ -1,16 +1,13 @@
 body {
 
     margin: 0;
-
     padding: 0;
-
     background-color: #222;
-
     color: white;
-
     font-family: sans-serif;
-
     text-align: center;
+
+    overflow-y: auto;
 
 }
 
@@ -157,7 +154,7 @@ button:hover {
 
     background-color: #111;
 
-    height: 220px;
+    height: 150px;
 
     padding: 15px;
 
@@ -206,14 +203,5 @@ button:hover {
 .hidden {
 
     display: none;
-
-}
-
-
-#battleScreen {
-
-    height: 100vh;
-
-    overflow: hidden;
 
 }
