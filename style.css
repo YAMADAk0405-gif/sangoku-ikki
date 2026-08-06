@@ -92,13 +92,21 @@ button:hover{
 
 #battleLog{
     background:#111;
-    height:120px;
-    padding:10px;
+
+    height:180px;
+
+    padding:15px;
+
     text-align:left;
+
     border-radius:10px;
-    line-height:1.5;
+
+    line-height:1.8;
+
     overflow-y:auto;
-    margin-bottom:10px;
+
+    margin-bottom:15px;
+
     box-sizing:border-box;
 }
 
@@ -151,8 +159,7 @@ button:hover{
     }
 
     #battleLog{
-        min-height:140px;
-        max-height:140px;
+    height:180px;
     }
 
 }
@@ -161,7 +168,7 @@ button:hover{
 
 #battleScreen{
 
-    padding:10px;
+    padding:15px;
     box-sizing:border-box;
 
 }
