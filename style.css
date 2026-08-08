@@ -339,16 +339,11 @@ button:hover {
 
 
 /* =========================
-   スマホ用
-   ========================= */
+スマホ用
+========================= */
 
 @media (max-width: 600px) {
 
-    #battleScreen h2 {
-        margin-top: 8px;
-    }
-
-}
     #app {
         width: 98%;
         margin: 5px auto;
@@ -358,108 +353,88 @@ button:hover {
         padding: 15px;
     }
 
-    /* 戦闘画面だけ上部余白を縮小 */
+    /* 戦闘画面 */
     #battleScreen {
         padding: 8px 15px 15px;
     }
 
-    
-    h1 {
-        font-size: 30px;
-    }
-
-
-    h2 {
+    /* 一騎打ちタイトル */
+    #battleScreen h2 {
+        margin-top: 8px;
+        margin-bottom: 20px;
         font-size: 24px;
     }
 
+    h1 {
+        font-size: 30px;
+    }
 
     button {
         font-size: 17px;
         padding: 12px;
     }
 
-
     /* 戦闘エリア */
-
     #battleArea {
-    gap: 5px;
-    flex-wrap: nowrap;
+        gap: 5px;
+        flex-wrap: nowrap;
     }
 
-
     /* 武将カード */
-
     .fighterCard {
         width: 42%;
         padding: 6px;
         border-radius: 10px;
     }
 
-
     .fighterCard h3 {
         font-size: 14px;
         margin: 5px 0;
     }
 
-
     /* 画像＋情報 */
-
     .fighterImage {
         height: 130px;
         border-radius: 7px;
         margin-bottom: 0;
     }
 
-
     .imageArea {
         font-size: 12px;
     }
 
-
     /* 武将情報 */
-
     #playerInfo,
     #enemyInfo {
         padding: 3px 5px 2px;
         font-size: 12px;
     }
 
-
     .fighterName {
         font-size: 14px;
     }
-
 
     .fighterHp {
         font-size: 11px;
     }
 
-
     /* HPバー */
-
     #playerInfo .hp,
     #enemyInfo .hp {
         height: 6px;
         margin: 3px 0 0;
     }
 
-
     /* 能力値 */
-
     .stats {
         margin-top: 0;
         padding: 2px 4px;
-
         font-size: 12px;
         line-height: 1.1;
     }
 
-
     /* 戦闘ログ */
-
     #battleLog {
         height: 180px;
     }
-
 }
