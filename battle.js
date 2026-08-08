@@ -499,6 +499,26 @@ if(defender.damageReduction > 0){
 // HP減少
 defender.hp -= damage;
 
+// 被弾演出
+let targetInfo;
+
+if (defender === playerFighter) {
+    targetInfo = playerInfo;
+} else {
+    targetInfo = enemyInfo;
+}
+
+let targetCard = targetInfo.closest(".fighterCard");
+
+if (targetCard) {
+    targetCard.classList.remove("damageShake");
+
+    // アニメーションを確実に再実行する
+    void targetCard.offsetWidth;
+
+    targetCard.classList.add("damageShake");
+}
+
 // HPが0未満にならないようにする
 if(defender.hp < 0){
 
