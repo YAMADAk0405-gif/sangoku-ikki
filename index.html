@@ -120,83 +120,84 @@
 <!-- 戦闘画面 -->
 <section id="battleScreen" style="display:none;">
 
-<h2>⚔ 一騎打ち ⚔</h2>
+    <h2>⚔ 一騎打ち ⚔</h2>
+
+    <div id="battleArea">
+
+        <!-- プレイヤーカード -->
+        <div class="fighterCard">
+
+            <h3 id="playerArmy">
+                山田軍【魏】
+            </h3>
+
+            <div class="fighterImage">
+
+                <div class="imageArea">
+                    武将画像
+                </div>
+
+                <div id="playerInfo"></div>
+
+            </div>
+
+            <div class="stats" id="playerStats"></div>
+
+        </div>
 
 
-<div id="battleArea">
+        <!-- VS -->
+        <div class="vs">
+            VS
+        </div>
 
 
-<!-- プレイヤー -->
+        <!-- 敵カード -->
+        <div class="fighterCard">
 
-<div class="fighterCard">
+            <h3 id="enemyArmy">
+                曹操軍【魏】
+            </h3>
 
-    <div class="fighterImage">
-        武将画像
+            <div class="fighterImage">
+
+                <div class="imageArea">
+                    武将画像
+                </div>
+
+                <div id="enemyInfo"></div>
+
+            </div>
+
+            <div class="stats" id="enemyStats"></div>
+
+        </div>
+
     </div>
 
-    <h3 id="playerArmy">
-        山田軍【魏】
+
+    <!-- 戦闘ログ -->
+    <h3>
+        戦闘ログ
     </h3>
 
-    <div id="playerInfo"></div>
-
-    <div class="stats" id="playerStats"></div>
-
-</div>
+    <div id="battleLog"></div>
 
 
+    <!-- 戦闘操作 -->
+    <button id="nextTurnButton">
+        次へ
+    </button>
 
-<div class="vs">
-    VS
-</div>
+    <button id="restartBattleButton">
+        再戦する
+    </button>
 
-
-
-<!-- 敵 -->
-
-<div class="fighterCard">
-
-    <div class="fighterImage">
-        武将画像
-    </div>
-
-    <h3 id="enemyArmy">
-        曹操軍【魏】
-    </h3>
-
-    <div id="enemyInfo"></div>
-
-    <div class="stats" id="enemyStats"></div>
-
-</div>
-
-
-</div>
-<!-- ↑ battleAreaここで終了 -->
-
-
-<h3>戦闘ログ</h3>
-
-<div id="battleLog"></div>
-
-
-<button id="nextTurnButton">
-次へ
-</button>
-
-
-<button id="restartBattleButton">
-再戦する
-</button>
-
-
-<button id="backTitleButton">
-トップへ戻る
-</button>
-
+    <button id="backTitleButton">
+        トップへ戻る
+    </button>
 
 </section>
-<!-- ↑ battleScreenここで終了 -->
 
 </div>
 

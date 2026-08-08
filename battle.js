@@ -706,89 +706,59 @@ battleLog.scrollHeight;
 
 function updateStatus(){
 
+    playerArmy.textContent =
+        "山田軍【魏】";
 
-playerArmy.textContent =
-"山田軍【魏】";
-
-
-enemyArmy.textContent =
-"曹操軍【魏】";
+    enemyArmy.textContent =
+        "曹操軍【魏】";
 
 
+    playerInfo.innerHTML = `
+        <div class="fighterName">
+            ${playerFighter.name}
+        </div>
 
-playerInfo.innerHTML =
+        <div class="fighterHp">
+            HP：${playerFighter.hp}/${playerFighter.maxHp}
+        </div>
 
-playerFighter.name +
-
-"<br>HP：" +
-playerFighter.hp +
-"/" +
-playerFighter.maxHp +
-
-
-`
-
-<div class="hp">
-
-<div class="hpValue"
-
-style="width:${playerFighter.hp / playerFighter.maxHp * 100}%">
-
-</div>
-
-</div>
-
-`;
+        <div class="hp">
+            <div
+                class="hpValue"
+                style="width:${playerFighter.hp / playerFighter.maxHp * 100}%">
+            </div>
+        </div>
+    `;
 
 
+    enemyInfo.innerHTML = `
+        <div class="fighterName">
+            ${enemyFighter.name}
+        </div>
 
-enemyInfo.innerHTML =
+        <div class="fighterHp">
+            HP：${enemyFighter.hp}/${enemyFighter.maxHp}
+        </div>
 
-enemyFighter.name +
-
-"<br>HP：" +
-enemyFighter.hp +
-"/" +
-enemyFighter.maxHp +
-
-
-`
-
-<div class="hp">
-
-<div class="hpValue"
-
-style="width:${enemyFighter.hp / enemyFighter.maxHp * 100}%">
-
-</div>
-
-</div>
-
-`;
+        <div class="hp">
+            <div
+                class="hpValue"
+                style="width:${enemyFighter.hp / enemyFighter.maxHp * 100}%">
+            </div>
+        </div>
+    `;
 
 
-playerStats.innerHTML =
-
-"武力：" + playerFighter.attack +
-"<br>" +
-
-"知力：" + playerFighter.intelligence +
-"<br>" +
-
-"速度：" + playerFighter.speed;
+    playerStats.innerHTML =
+        "武" + playerFighter.attack +
+        "　知" + playerFighter.intelligence +
+        "　速" + playerFighter.speed;
 
 
-
-enemyStats.innerHTML =
-
-"武力：" + enemyFighter.attack +
-"<br>" +
-
-"知力：" + enemyFighter.intelligence +
-"<br>" +
-
-"速度：" + enemyFighter.speed;
-
+    enemyStats.innerHTML =
+        "武" + enemyFighter.attack +
+        "　知" + enemyFighter.intelligence +
+        "　速" + enemyFighter.speed;
 
 }
 
