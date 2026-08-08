@@ -418,7 +418,75 @@ else{
 
 
 
+// 被弾演出
+function playDamageEffect(
+    defender,
+    damage,
+    critical = false,
+    fire = false
+){
 
+    let targetInfo;
+
+    if(defender === playerFighter){
+
+        targetInfo = playerInfo;
+
+    }else{
+
+        targetInfo = enemyInfo;
+
+    }
+
+    let targetCard =
+        targetInfo.closest(".fighterCard");
+
+
+    if(!targetCard){
+
+        return;
+
+    }
+
+
+    targetCard.classList.remove(
+    "damageShake",
+    "heavyDamageShake",
+    "fireDamageFlash"
+    );
+
+
+    // アニメーションを確実に再実行
+    void targetCard.offsetWidth;
+
+
+    // 会心、または50以上のダメージ
+    if(critical || damage >= 50){
+
+        targetCard.classList.add(
+            "heavyDamageShake"
+        );
+
+    }else{
+
+        targetCard.classList.add(
+            "damageShake"
+        );
+
+    }
+
+    // 火計専用フラッシュ
+    if(fire){
+
+    void targetCard.offsetWidth;
+
+    targetCard.classList.add(
+        "fireDamageFlash"
+    );
+
+    }
+
+}
 
 // 攻撃
 
@@ -500,41 +568,11 @@ if(defender.damageReduction > 0){
 defender.hp -= damage;
 
 // 被弾演出
-let targetInfo;
-
-if (defender === playerFighter) {
-    targetInfo = playerInfo;
-} else {
-    targetInfo = enemyInfo;
-}
-
-let targetCard = targetInfo.closest(".fighterCard");
-
-if (targetCard) {
-
-    targetCard.classList.remove(
-        "damageShake",
-        "heavyDamageShake"
-    );
-
-    // アニメーションを確実に再実行
-    void targetCard.offsetWidth;
-
-    // 会心、または大ダメージなら強烈な揺れ
-    if (critical || damage >= 50) {
-
-        targetCard.classList.add(
-            "heavyDamageShake"
-        );
-
-    } else {
-
-        targetCard.classList.add(
-            "damageShake"
-        );
-
-    }
-}
+playDamageEffect(
+    defender,
+    damage,
+    critical
+);
 
 // HPが0未満にならないようにする
 if(defender.hp < 0){
@@ -1192,33 +1230,34 @@ if(
 
     if(strategyName === "強撃"){
 
-        let damage =
-        attacker.attack -
-        Math.floor(defender.defense / 2);
+    let damage =
+    attacker.attack -
+    Math.floor(defender.defense / 2);
 
+    damage =
+    Math.floor(damage * 1.3);
 
-        damage =
-        Math.floor(damage * 1.3);
+    defender.hp -= damage;
 
+    if(defender.hp < 0){
 
-        defender.hp -= damage;
-
-
-        if(defender.hp < 0){
-
-            defender.hp = 0;
-
-        }
-
-
-        addLog(
-            damage +
-            "ダメージ！"
-        );
-
-        return true;
+        defender.hp = 0;
 
     }
+
+    // 被弾演出
+    playDamageEffect(
+        defender,
+        damage
+    );
+
+    addLog(
+        damage +
+        "ダメージ！"
+    );
+
+    return true;
+}
 
 
 
@@ -1246,13 +1285,19 @@ if(
 
     defender.hp -= damage;
 
-
     if(defender.hp < 0){
 
         defender.hp = 0;
 
     }
 
+    // 被弾演出
+    playDamageEffect(
+    defender,
+    damage,
+    false,
+    true
+    );
 
     addLog(
         "🔥 火計！ " +

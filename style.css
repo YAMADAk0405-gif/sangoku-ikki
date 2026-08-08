@@ -394,6 +394,55 @@ button:hover {
     }
 }
 
+/* =========================
+   火計 被弾フラッシュ
+========================= */
+
+.fighterCard {
+    position: relative;
+}
+
+.fighterCard.fireDamageFlash::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 20;
+
+    animation: fireDamageFlash 0.35s linear;
+}
+
+@keyframes fireDamageFlash {
+    0% {
+        background: rgba(255, 0, 0, 0);
+    }
+
+    20% {
+        background: rgba(255, 0, 0, 0.75);
+    }
+
+    40% {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    60% {
+        background: rgba(255, 0, 0, 0.75);
+    }
+
+    80% {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    100% {
+        background: rgba(255, 0, 0, 0);
+    }
+}
+
+.fireDamageFlash {
+    animation: fireDamageFlash 0.35s linear;
+}
+
 .damageShake {
     animation: damageShake 0.3s ease;
 }
