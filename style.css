@@ -1,431 +1,277 @@
-body{
-    margin:0;
-    padding:0;
-    background:#222;
-    color:white;
-    font-family:sans-serif;
-    text-align:center;
-    overflow-y:auto;
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    overflow-y: auto;
 }
 
-#app{
-    width:95%;
-    max-width:500px;
-    margin:5px auto;
+
+/* アプリ全体 */
+
+#app {
+    width: 95%;
+    max-width: 500px;
+    margin: 5px auto;
 }
 
-section{
-    background:#333;
-    padding:20px;
-    border-radius:15px;
-    margin-bottom:20px;
+
+/* 各画面 */
+
+section {
+    background: #333;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
-h1{
-    font-size:36px;
-    margin-bottom:30px;
+
+/* タイトル */
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
 }
 
-h2{
-    margin-bottom:20px;
+h2 {
+    margin-bottom: 20px;
 }
 
-button{
-    width:100%;
-    max-width:320px;
-    font-size:18px;
-    padding:14px;
-    margin:8px auto;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    display:block;
+
+/* ボタン */
+
+button {
+    width: 100%;
+    max-width: 320px;
+    font-size: 18px;
+    padding: 14px;
+    margin: 8px auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
 }
 
-button:hover{
-    opacity:0.9;
+button:hover {
+    opacity: 0.9;
 }
+
 
 /* 勢力ボタン */
 
-.factionButton{
-    width:120px;
-    display:inline-block;
-    margin:8px;
+.factionButton {
+    width: 120px;
+    display: inline-block;
+    margin: 8px;
 }
+
 
 /* 武将一覧 */
 
-#warriorList{
-    width:100%;
-    max-width:350px;
-    margin:20px auto;
-    text-align:left;
+#warriorList {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    text-align: left;
 }
 
-#warriorList div{
-    margin:10px 0;
-    font-size:18px;
+#warriorList div {
+    margin: 10px 0;
+    font-size: 18px;
 }
+
 
 /* 部隊表示 */
 
-#teamList{
-    font-size:20px;
-    line-height:2;
+#teamList {
+    font-size: 20px;
+    line-height: 2;
 }
 
-/* 戦闘画面 */
-
-#battleStatus{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-#playerInfo,
-#enemyInfo{
-    font-size:20px;
-}
-
-/* 戦闘ログ */
-
-#battleLog{
-    background:#111;
-
-    height:180px;
-
-    padding:15px;
-
-    text-align:left;
-
-    border-radius:10px;
-
-    line-height:1.8;
-
-    overflow-y:auto;
-
-    margin-bottom:15px;
-
-    box-sizing:border-box;
-}
-
-/* HPバー */
-
-.hp{
-    width:90%;
-    height:20px;
-    margin:10px auto;
-    background:#555;
-    border-radius:10px;
-}
-
-.hpValue{
-    height:100%;
-    background:#4caf50;
-    border-radius:10px;
-}
-
-/* 非表示 */
-
-.hidden{
-    display:none;
-}
-
-/* スマホ用 */
-
-@media (max-width:600px){
-
-    #app{
-    width:98%;
-    margin:5px auto;
-    }
-
-    section{
-        padding:15px;
-    }
-
-    h1{
-        font-size:30px;
-    }
-
-    h2{
-        font-size:24px;
-    }
-
-    button{
-        font-size:17px;
-        padding:12px;
-    }
-
-    #battleLog{
-    height:180px;
-    }
-
-}
-
-/* 戦闘画面調整 */
-
-#battleScreen{
-
-    padding:15px;
-    box-sizing:border-box;
-
-}
-/* 戦闘ログ最終調整 */
-
-#battleLog{
-
-    height:220px !important;
-
-    background:#111;
-
-    padding:15px;
-
-    text-align:left;
-
-    border-radius:10px;
-
-    line-height:1.8;
-
-    overflow-y:auto;
-
-    box-sizing:border-box;
-
-}
-
-/* Ver0.1.21 戦闘画面 */
-
-#battleArea{
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-
-}
-
-
-.fighterCard{
-    width:45%;
-    background:#3a3a3a;
-    border-radius:15px;
-    padding:12px;
-    box-sizing:border-box;
-    box-shadow:0 0 8px #000;
-}
-
-
-
-.fighterImage{
-    height:180px;
-    background:#222;
-    border-radius:10px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-end;
-    font-size:16px;
-    margin-bottom:10px;
-    padding:8px;
-    box-sizing:border-box;
-}
-
-
-.vs{
-
-    font-size:24px;
-
-    font-weight:bold;
-
-}
-
-
-
-@media(max-width:600px){
-
-    #battleArea{
-
-        gap:5px;
-
-    }
-
-
-    .fighterCard{
-
-        width:45%;
-
-        padding:8px;
-
-    }
-
-
-    .fighterImage{
-    height:170px;
-}
-
-
-}
-
-
-.stats{
-
-    margin-top:10px;
-
-    font-size:15px;
-
-    line-height:1.6;
-
-    background:#222;
-
-    border-radius:8px;
-
-    padding:8px;
-
-}
 
 /* 部隊カード */
 
-.teamCard{
-
-    background:#222;
-
-    padding:12px;
-
-    margin:10px 0;
-
-    border-radius:10px;
-
-    text-align:left;
-
-}
-
-
-.teamName{
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    margin-bottom:8px;
-
-}
-
-
-.teamName span{
-
-    float:right;
-
-    font-size:16px;
-
-}
-
-
-.teamStatus{
-
-    font-size:16px;
-
+.teamCard {
+    background: #222;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: left;
 }
 
 .teamContent {
-
     display: flex;
-
     align-items: center;
-
 }
 
+.teamNumber {
+    margin-right: 8px;
+}
 
 .teamImage {
-
     width: 45px;
-
     height: 45px;
-
     margin-right: 10px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
 }
-
 
 .teamDetail {
-
     flex: 1;
-
 }
-
 
 .teamName {
-    display:flex;
-    align-items:center;
-    gap:8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
+.teamName span {
+    float: right;
+    font-size: 16px;
+}
 
 .teamStatus {
-
+    font-size: 16px;
     margin-top: 5px;
-
 }
 
-.imageArea{
-    flex:1;
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
+/* 戦闘画面 */
+
+#battleScreen {
+    padding: 15px;
+    box-sizing: border-box;
 }
 
-#playerInfo,
-#enemyInfo{
-    width:100%;
-    font-size:16px;
+
+/* 戦闘カードエリア */
+
+#battleArea {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+
+/* 武将カード */
 
 .fighterCard {
+    width: 42%;
+    background: #3a3a3a;
+    border-radius: 15px;
+    padding: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px #000;
+
     display: flex;
     flex-direction: column;
 }
+
+
+/* 軍団名 */
+
+.fighterCard h3 {
+    margin: 5px 0 8px;
+}
+
+
+/* 画像＋武将情報エリア */
 
 .fighterImage {
     position: relative;
+    width: 100%;
     height: 180px;
-    padding: 0;
-    overflow: hidden;
+
+    background: #222;
+    border-radius: 10px;
+
     display: flex;
     flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow: hidden;
 }
+
+
+/* 画像部分 */
 
 .imageArea {
     flex: 1;
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-size: 16px;
 }
+
+
+/* 武将情報 */
 
 #playerInfo,
 #enemyInfo {
     width: 100%;
     box-sizing: border-box;
+
     padding: 6px 8px 4px;
+
     background: rgba(0, 0, 0, 0.65);
+
     font-size: 14px;
 }
+
+
+/* 武将名 */
 
 .fighterName {
     font-weight: bold;
     font-size: 17px;
 }
 
+
+/* HP */
+
 .fighterHp {
     font-size: 13px;
 }
+
+
+/* HPバー */
+
+.hp {
+    width: 90%;
+    height: 20px;
+
+    margin: 10px auto;
+
+    background: #555;
+    border-radius: 10px;
+}
+
+.hpValue {
+    height: 100%;
+
+    background: #4caf50;
+    border-radius: 10px;
+}
+
+
+/* カード内HPバー */
 
 #playerInfo .hp,
 #enemyInfo .hp {
@@ -434,78 +280,173 @@ button:hover{
     margin: 4px 0 0;
 }
 
-@media(max-width:600px){
 
-    .fighterCard{
-        padding:6px;
-        border-radius:10px;
+/* 武将能力 */
+
+.stats {
+    margin-top: 10px;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    background: #222;
+    border-radius: 8px;
+
+    padding: 8px;
+}
+
+
+/* VS */
+
+.vs {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* 戦闘ログ */
+
+#battleLog {
+    height: 220px;
+
+    background: #111;
+
+    padding: 15px;
+
+    text-align: left;
+
+    border-radius: 10px;
+
+    line-height: 1.8;
+
+    overflow-y: auto;
+
+    margin-bottom: 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* 非表示 */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   スマホ用
+   ========================= */
+
+@media (max-width: 600px) {
+
+    #app {
+        width: 98%;
+        margin: 5px auto;
     }
 
-    .fighterCard h3{
-        font-size:14px;
-        margin:5px 0;
+
+    section {
+        padding: 15px;
     }
 
-    .fighterImage{
-        height:130px;
-        border-radius:7px;
+
+    h1 {
+        font-size: 30px;
     }
 
-    .imageArea{
-        font-size:12px;
+
+    h2 {
+        font-size: 24px;
     }
+
+
+    button {
+        font-size: 17px;
+        padding: 12px;
+    }
+
+
+    /* 戦闘エリア */
+
+    #battleArea {
+    gap: 5px;
+    flex-wrap: nowrap;
+    }
+
+
+    /* 武将カード */
+
+    .fighterCard {
+        width: 42%;
+        padding: 6px;
+        border-radius: 10px;
+    }
+
+
+    .fighterCard h3 {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+
+    /* 画像＋情報 */
+
+    .fighterImage {
+        height: 130px;
+        border-radius: 7px;
+        margin-bottom: 0;
+    }
+
+
+    .imageArea {
+        font-size: 12px;
+    }
+
+
+    /* 武将情報 */
 
     #playerInfo,
-    #enemyInfo{
-        padding:4px 5px 3px;
-        font-size:12px;
+    #enemyInfo {
+        padding: 3px 5px 2px;
+        font-size: 12px;
     }
 
-    .fighterName{
-        font-size:14px;
+
+    .fighterName {
+        font-size: 14px;
     }
 
-    .fighterHp{
-        font-size:11px;
+
+    .fighterHp {
+        font-size: 11px;
     }
+
+
+    /* HPバー */
 
     #playerInfo .hp,
-    #enemyInfo .hp{
-        height:6px;
-        margin:3px 0 0;
+    #enemyInfo .hp {
+        height: 6px;
+        margin: 3px 0 0;
     }
 
-    .stats{
-        margin-top:5px;
-        padding:5px;
-        font-size:12px;
-        line-height:1.3;
+
+    /* 能力値 */
+
+    .stats {
+        margin-top: 0;
+        padding: 2px 4px;
+
+        font-size: 12px;
+        line-height: 1.1;
     }
 
-    .fighterImage{
-    margin-bottom:2px;
-}
 
-    .stats{
-    margin-top:0;
-    padding:2px 4px;
-    line-height:1.2;
-    font-size:12px;
-}
+    /* 戦闘ログ */
 
-}
-
-@media(max-width:600px){
-
-    .fighterImage{
-        margin-bottom:0 !important;
-    }
-
-    .stats{
-        margin-top:0 !important;
-        padding-top:2px !important;
-        padding-bottom:2px !important;
-        line-height:1.1 !important;
+    #battleLog {
+        height: 180px;
     }
 
 }
