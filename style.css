@@ -360,8 +360,46 @@ button:hover {
     }
 }
 
+@keyframes heavyDamageShake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(-8px, -5px);
+    }
+
+    30% {
+        transform: translate(8px, 5px);
+    }
+
+    45% {
+        transform: translate(8px, -5px);
+    }
+
+    60% {
+        transform: translate(-8px, 5px);
+    }
+
+    75% {
+        transform: translate(6px, -4px);
+    }
+
+    90% {
+        transform: translate(-6px, 4px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
 .damageShake {
     animation: damageShake 0.3s ease;
+}
+
+.heavyDamageShake {
+    animation: heavyDamageShake 0.32s ease;
 }
 
 /* 非表示 */

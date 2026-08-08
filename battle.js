@@ -511,12 +511,29 @@ if (defender === playerFighter) {
 let targetCard = targetInfo.closest(".fighterCard");
 
 if (targetCard) {
-    targetCard.classList.remove("damageShake");
 
-    // アニメーションを確実に再実行する
+    targetCard.classList.remove(
+        "damageShake",
+        "heavyDamageShake"
+    );
+
+    // アニメーションを確実に再実行
     void targetCard.offsetWidth;
 
-    targetCard.classList.add("damageShake");
+    // 会心、または大ダメージなら強烈な揺れ
+    if (critical || damage >= 50) {
+
+        targetCard.classList.add(
+            "heavyDamageShake"
+        );
+
+    } else {
+
+        targetCard.classList.add(
+            "damageShake"
+        );
+
+    }
 }
 
 // HPが0未満にならないようにする
