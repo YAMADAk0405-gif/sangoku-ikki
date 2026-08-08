@@ -345,12 +345,16 @@ button:hover {
         margin: 5px auto;
     }
 
-
     section {
         padding: 15px;
     }
 
+    /* 戦闘画面だけ上部余白を縮小 */
+    #battleScreen {
+        padding: 8px 15px 15px;
+    }
 
+    
     h1 {
         font-size: 30px;
     }
