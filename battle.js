@@ -169,11 +169,22 @@ document.getElementById("restartBattleButton");
 
 function battleStart(players, enemies){
 
+    // 戦闘開始時に被弾演出をリセット
+    document.querySelectorAll(".fighterCard").forEach(card => {
+
+    card.classList.remove(
+        "damageShake",
+        "heavyDamageShake",
+        "fireDamageFlash"
+    );
+
+    });
+
     currentPlayerData =
     players.map(player => ({
         ...player
     }));
-
+ 
 
     currentEnemyData =
     enemies.map(enemy => ({
