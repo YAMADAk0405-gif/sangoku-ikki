@@ -494,3 +494,18 @@ button:hover{
 }
 
 }
+
+@media(max-width:600px){
+
+    .fighterImage{
+        margin-bottom:0 !important;
+    }
+
+    .stats{
+        margin-top:0 !important;
+        padding-top:2px !important;
+        padding-bottom:2px !important;
+        line-height:1.1 !important;
+    }
+
+}
