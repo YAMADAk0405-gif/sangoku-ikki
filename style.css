@@ -353,17 +353,24 @@ button:hover {
         padding: 15px;
     }
 
-    /* 戦闘画面 */
+    /* =========================
+       戦闘画面
+    ========================= */
+
     #battleScreen {
         padding: 0 15px 15px;
     }
 
     /* 一騎打ちタイトル */
     #battleScreen h2 {
-        margin-top: 4px;
+        margin-top: 0;
         margin-bottom: 20px;
         font-size: 20px;
     }
+
+    /* =========================
+       その他
+    ========================= */
 
     h1 {
         font-size: 30px;
@@ -374,13 +381,19 @@ button:hover {
         padding: 12px;
     }
 
-    /* 戦闘エリア */
+    /* =========================
+       戦闘エリア
+    ========================= */
+
     #battleArea {
         gap: 5px;
         flex-wrap: nowrap;
     }
 
-    /* 武将カード */
+    /* =========================
+       武将カード
+    ========================= */
+
     .fighterCard {
         width: 42%;
         padding: 6px;
@@ -392,7 +405,10 @@ button:hover {
         margin: 5px 0;
     }
 
-    /* 画像＋情報 */
+    /* =========================
+       画像＋情報
+    ========================= */
+
     .fighterImage {
         height: 130px;
         border-radius: 7px;
@@ -403,7 +419,10 @@ button:hover {
         font-size: 12px;
     }
 
-    /* 武将情報 */
+    /* =========================
+       武将情報
+    ========================= */
+
     #playerInfo,
     #enemyInfo {
         padding: 3px 5px 2px;
@@ -418,14 +437,20 @@ button:hover {
         font-size: 11px;
     }
 
-    /* HPバー */
+    /* =========================
+       HPバー
+    ========================= */
+
     #playerInfo .hp,
     #enemyInfo .hp {
         height: 6px;
         margin: 3px 0 0;
     }
 
-    /* 能力値 */
+    /* =========================
+       能力値
+    ========================= */
+
     .stats {
         margin-top: 0;
         padding: 2px 4px;
@@ -433,7 +458,10 @@ button:hover {
         line-height: 1.1;
     }
 
-    /* 戦闘ログ */
+    /* =========================
+       戦闘ログ
+    ========================= */
+
     #battleLog {
         height: 180px;
     }
