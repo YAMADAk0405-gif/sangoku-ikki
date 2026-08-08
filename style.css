@@ -355,7 +355,7 @@ button:hover {
 
     /* 戦闘画面 */
     #battleScreen {
-        padding: 8px 15px 15px;
+        padding: 0 15px 15px;
     }
 
     /* 一騎打ちタイトル */
