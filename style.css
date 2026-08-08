@@ -400,7 +400,7 @@ button:hover {
     }
 
     .fighterCard h3 {
-        font-size: 14px;
+        font-size: 12px;
         margin: 0 0 5px;
     }
 
@@ -425,7 +425,7 @@ button:hover {
     #playerInfo,
     #enemyInfo {
         padding: 3px 5px 2px;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .fighterName {
@@ -463,6 +463,6 @@ button:hover {
 
     #battleLog {
         height: 180px;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
