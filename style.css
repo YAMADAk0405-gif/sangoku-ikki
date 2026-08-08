@@ -295,6 +295,10 @@ button:hover {
     padding: 8px;
 }
 
+#battleScreen h2 {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
 
 /* VS */
 
@@ -340,6 +344,11 @@ button:hover {
 
 @media (max-width: 600px) {
 
+    #battleScreen h2 {
+        margin-top: 8px;
+    }
+
+}
     #app {
         width: 98%;
         margin: 5px auto;
