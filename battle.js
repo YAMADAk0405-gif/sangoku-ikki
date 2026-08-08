@@ -142,6 +142,20 @@ document.getElementById("playerInfo");
 const enemyInfo =
 document.getElementById("enemyInfo");
 
+const playerArmy =
+document.getElementById("teamArmy")
+
+
+const enemyArmy =
+document.getElementById("enemyArmy");
+
+const playerStats =
+document.getElementById("playerStats");
+
+
+const enemyStats =
+document.getElementById("enemyStats");
+
 
 const nextTurnButton =
 document.getElementById("nextTurnButton");
@@ -693,6 +707,15 @@ battleLog.scrollHeight;
 function updateStatus(){
 
 
+playerArmy.textContent =
+"山田軍【魏】";
+
+
+enemyArmy.textContent =
+"曹操軍【魏】";
+
+
+
 playerInfo.innerHTML =
 
 playerFighter.name +
@@ -701,6 +724,7 @@ playerFighter.name +
 playerFighter.hp +
 "/" +
 playerFighter.maxHp +
+
 
 `
 
@@ -727,6 +751,7 @@ enemyFighter.hp +
 "/" +
 enemyFighter.maxHp +
 
+
 `
 
 <div class="hp">
@@ -741,6 +766,28 @@ style="width:${enemyFighter.hp / enemyFighter.maxHp * 100}%">
 
 `;
 
+
+playerStats.innerHTML =
+
+"武力：" + playerFighter.attack +
+"<br>" +
+
+"知力：" + playerFighter.intelligence +
+"<br>" +
+
+"速度：" + playerFighter.speed;
+
+
+
+enemyStats.innerHTML =
+
+"武力：" + enemyFighter.attack +
+"<br>" +
+
+"知力：" + enemyFighter.intelligence +
+"<br>" +
+
+"速度：" + enemyFighter.speed;
 
 
 }

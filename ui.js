@@ -4,6 +4,17 @@
 const backTitleButton =
 document.getElementById("backTitleButton");
 
+const editTeamButton =
+document.getElementById("editTeamButton");
+
+const completeTeamButton =
+document.getElementById("completeTeamButton");
+
+console.log("完了ボタン確認", completeTeamButton);
+
+const formationScreen =
+document.getElementById("formationScreen");
+
 
 let leaderWarrior = null;
 
@@ -30,6 +41,13 @@ document.getElementById("backFactionButton");
 
 const teamScreen =
 document.getElementById("teamScreen");
+
+
+const teamEditScreen =
+document.getElementById("teamEditScreen");
+
+console.log("teamScreen", teamScreen);
+console.log("teamEditScreen", teamEditScreen);
 
 
 const battleScreen =
@@ -192,14 +210,11 @@ confirmButton.addEventListener("click", function(){
     createTeam();
 
 
-
-    showTeam();
-
-
-
     selectScreen.style.display = "none";
 
     teamScreen.style.display = "block";
+
+    displayPlayerTeam();
 
 
 });
@@ -249,6 +264,18 @@ function showTeam(){
 }
 
 
+// 部隊編成画面へ
+
+editTeamButton.addEventListener("click", function(){
+
+    teamScreen.style.display = "none";
+
+    teamEditScreen.style.display = "block";
+
+
+    displayEditTeam();
+
+});
 
 
 
@@ -340,6 +367,14 @@ function(){
 
 });
 
-
-
 }
+
+// 部隊編成完了
+
+completeTeamButton.addEventListener("click", function(){
+
+    teamEditScreen.style.display = "none";
+
+    teamScreen.style.display = "block";
+
+});

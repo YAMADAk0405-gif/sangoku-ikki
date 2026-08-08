@@ -189,5 +189,176 @@ function createBattleWarrior(warrior){
 
 };
 
+}
+
+function displayPlayerTeam(){
+
+    const teamList =
+    document.getElementById("teamList");
+
+
+    const teamCost =
+    document.getElementById("teamCost");
+
+
+    let html = "";
+
+    let totalCost = 0;
+
+
+    playerTeam.forEach(function(warrior,index){
+
+
+        let cost = warrior.rank;
+
+        totalCost += cost;
+
+
+        html += `
+
+        <div class="teamCard">
+
+            <div class="teamContent">
+
+                <div class="teamNumber">
+                    ${index + 1}.
+                </div>
+
+
+                <div class="teamImage">
+                    武将画像
+                </div>
+
+
+                <div class="teamDetail">
+
+                    <div class="teamName">
+
+                        ${warrior.name}
+                        　★${warrior.rank}
+                        　コスト${cost}
+
+                    </div>
+
+
+                    <div class="teamStatus">
+
+                        武${warrior.attack}
+                        　知${warrior.intelligence}
+                        　速${warrior.speed}
+                        　防${warrior.defense}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+
+
+    });
+
+
+    teamList.innerHTML = html;
+
+
+    teamCost.textContent =
+    "総コスト：" +
+    totalCost +
+    " / 20";
+
+}
+
+function displayEditTeam(){
+
+    const editTeamList =
+    document.getElementById("editTeamList");
+
+
+    const editTeamCost =
+    document.getElementById("editTeamCost");
+
+
+    let html = "";
+
+    let totalCost = 0;
+
+
+    playerTeam.forEach(function(warrior,index){
+
+
+        let cost = warrior.rank;
+
+
+        totalCost += cost;
+
+
+       html += `
+
+<div class="teamCard">
+
+
+    <div class="teamContent">
+
+
+        <div class="teamNumber">
+
+            ${index + 1}.
+
+        </div>
+
+
+        <div class="teamImage">
+
+            武将画像
+
+        </div>
+
+
+        <div class="teamDetail">
+
+
+            <div class="teamName">
+
+                ${warrior.name}
+                　★${warrior.rank}
+                　コスト${cost}
+
+            </div>
+
+
+            <div class="teamStatus">
+
+                武${warrior.attack}
+                　知${warrior.intelligence}
+                　速${warrior.speed}
+                　防${warrior.defense}
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+`;
+
+    });
+
+
+    editTeamList.innerHTML = html;
+
+
+    editTeamCost.textContent =
+    "総コスト：" +
+    totalCost +
+    " / 20";
 
 }
